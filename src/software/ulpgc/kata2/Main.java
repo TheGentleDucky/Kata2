@@ -9,16 +9,14 @@ public class Main {
     public static void main(String[] args) {
         EsqueletoLoader loader = new TsvFileEsqueletoLoader(new File("Skelet.txt"));
         List<Esqueleto> esqueletos = loader.load();
-        Map<String, String> chart = new HashMap<>();
-        for (Esqueleto esqueleto : esqueletos) {
-            String nombre = esqueleto.getNombre();
-            String numMemes = esqueleto.getNumMemes();
-            chart.put(nombre, numMemes);
-        }
-            for (String key : chart.keySet()) {
-                System.out.println(key + " : " + chart.get(key));
-
+        Map<String,Integer> chart = new HashMap<>();
+        for (Esqueleto esqueleto: esqueletos){
+            String numHuesos  = esqueleto.getNumHuesos();
+            chart.put(numHuesos, chart.getOrDefault(numHuesos,0)+1);
         }
 
+        for (String key: chart.keySet()){
+            System.out.println(key + " : " + chart.get(key));
+        }
     }
 }

@@ -7,8 +7,6 @@ public class Esqueleto {
     private final String tipoMemes;
     private final String primeraAparicion;
 
-
-
     public Esqueleto(String nombre, String numHuesos, String numMemes, String tipoMemes, String primeraAparicion) {
         this.nombre = nombre;
         this.numHuesos = numHuesos;
@@ -16,6 +14,7 @@ public class Esqueleto {
         this.tipoMemes = tipoMemes;
         this.primeraAparicion = primeraAparicion;
     }
+
     public String getNombre() {
         return nombre;
     }
@@ -35,15 +34,14 @@ public class Esqueleto {
     public String getPrimeraAparicion() {
         return primeraAparicion;
     }
-
     @Override
-    public String toString() {
+    public String toString(){
         return "Esqueleto{" +
                 "Nombre ='" + nombre + '\'' +
-                ", número de huesos ='" + numHuesos + '\'' +
-                ", apariciones en Memes ='" + numMemes + '\'' +
-                ", formato predominante ='" + tipoMemes + '\'' +
-                ", primera aparición ='" + primeraAparicion + '\''+
+                ", numero de huesos = '" + numHuesos + '\''+
+                ", apariciones en Memes = '" + numMemes + '\''+
+                ", formato predominante = '" + tipoMemes + '\''+
+                ", primera aparicion = '" + primeraAparicion + '\''+
                 '}';
     }
 
