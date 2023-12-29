@@ -1,5 +1,6 @@
 package software.ulpgc.kata2;
 
+
 public class Esqueleto {
     private final String nombre;
     private final String numHuesos;
